@@ -1,0 +1,365 @@
+layout: { qmk_keyboard: crkbd/rev1, layout_name: LAYOUT_split_3x6_3 }
+layers:
+  BASE:
+    [
+      $$mdi:keyboard-tab$$,
+      Q,
+      W,
+      E,
+      R,
+      T,
+      Y,
+      U,
+      I,
+      O,
+      P,
+      $$mdi:backspace-outline$$,
+      Ctrl,
+      { h: Alt, t: A },
+      { h: $$mdi:apple-keyboard-command$$, t: S },
+      { h: SYM, t: D },
+      { h: Shift, t: F },
+      G,
+      H,
+      { h: Shift, t: J },
+      { h: SYM, t: K },
+      { h: $$mdi:apple-keyboard-command$$, t: L },
+      { h: Alt, t: ; },
+      "'",
+      { h: FN, t: OSL },
+      { h: MED, t: Z },
+      X,
+      C,
+      V,
+      B,
+      N,
+      M,
+      ",",
+      .,
+      /,
+      $$mdi:keyboard-esc$$,
+      $$mdi:keyboard-esc$$,
+      { h: NAV, t: $$mdi:backspace-outline$$ },
+      $$mdi:keyboard-space$$,
+      $$mdi:keyboard-return$$,
+      "-",
+      ALT,
+    ]
+  NOR:
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - Å
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - Ø
+    - Æ
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - "'"
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - ;
+  NUM:
+    - ""
+    - ""
+    - ""
+    - ^
+    - ""
+    - ""
+    - { t: ▽, type: trans }
+    - J
+    - K
+    - "%"
+    - { t: ▽, type: trans }
+    - $$mdi:backspace-outline$$
+    - ""
+    - "6"
+    - "4"
+    - "0"
+    - "2"
+    - ⇧G
+    - "*"
+    - "3"
+    - "1"
+    - "5"
+    - "7"
+    - ""
+    - ""
+    - ""
+    - { t: ▽, type: trans }
+    - +
+    - "8"
+    - ""
+    - ""
+    - "9"
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - ""
+    - CANCEL
+    - $$mdi:backspace-outline$$
+    - { t: ▽, type: trans }
+    - "="
+    - { t: ▽, type: trans }
+    - _
+  SYM:
+    - ""
+    - ""
+    - ""
+    - ^
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - "%"
+    - ""
+    - $$mdi:backspace-outline$$
+    - ""
+    - "@"
+    - "~"
+    - { t: $, type: held }
+    - "!"
+    - ""
+    - "*"
+    - "&"
+    - { t: "#", type: held }
+    - ""
+    - "|"
+    - "`"
+    - ""
+    - ""
+    - ""
+    - +
+    - =>
+    - ""
+    - ""
+    - ->
+    - ""
+    - ""
+    - \
+    - ""
+    - ""
+    - BSPC
+    - { t: ▽, type: trans }
+    - "="
+    - { t: ▽, type: trans }
+    - ""
+  NAV:
+    - ""
+    - ""
+    - { h: ⌘S, t: Save }
+    - ""
+    - ""
+    - ""
+    - ""
+    - WS DECR
+    - WS INC
+    - PRNT3
+    - PRNT4
+    - PRNT5
+    - ""
+    - { h: ⌘Z, t: Undo }
+    - { h: ⌘X, t: Cut }
+    - { h: ⌘C, t: Copy }
+    - { h: ⌘V, t: Paste }
+    - CAPS
+    - LEFT
+    - DOWN
+    - UP
+    - RGHT
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - TG( NOR)
+    - CMDD
+    - CMDI
+    - ""
+    - ""
+    - ""
+    - ""
+    - { type: held }
+    - { t: ▽, type: trans }
+    - RAYCA
+    - MO( ADJ)
+    - ""
+  FN:
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      F6,
+      F4,
+      F10,
+      F2,
+      F12,
+      F11,
+      F3,
+      F1,
+      F5,
+      F7,
+      "",
+      "",
+      "",
+      "",
+      "",
+      F8,
+      "",
+      "",
+      F9,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ]
+  MED:
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      BRID,
+      "",
+      BRIU,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      VOLD,
+      MUTE,
+      VOLU,
+      "",
+      "",
+      "",
+      { type: held },
+      "",
+      "",
+      "",
+      "",
+      "",
+      MPRV,
+      MPLY,
+      MNXT,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ]
+  ADJ:
+    [
+      CG TOGG,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      RGB TOG,
+      RGB HUI,
+      RGB SAI,
+      RGB VAI,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      RGB MOD,
+      RGB HUD,
+      RGB SAD,
+      RGB VAD,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      { type: held },
+      "",
+    ]
+combos:
+  - { p: [14, 15], k: "{", l: ["BASE"] }
+  - { p: [15, 16], k: "(", l: ["BASE"] }
+  - { p: [19, 20], k: ")", l: ["BASE"] }
+  - { p: [20, 21], k: "}", l: ["BASE"] }
+  - { p: [26, 27], k: "<", l: ["BASE"] }
+  - { p: [27, 28], k: "[", l: ["BASE"] }
+  - { p: [31, 32], k: "]", l: ["BASE"] }
+  - { p: [32, 33], k: ">", l: ["BASE"] }
+  - { p: [27, 32], k: "CW", a: bottom, l: ["BASE"], offset: 2.5 }
+  - { p: [38, 39], k: "NUM", a: top, offset: 0.5, l: ["BASE"] }
