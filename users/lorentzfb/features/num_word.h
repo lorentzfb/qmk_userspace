@@ -2,6 +2,8 @@
 
 #include QMK_KEYBOARD_H
 
+#include "lorentzfb.h"
+
 // Check whether numword is on
 bool num_word_enabled(void);
 // Enable numword
