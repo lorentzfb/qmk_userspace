@@ -11,6 +11,9 @@
 #undef  QUICK_TAP_TERM
 #define QUICK_TAP_TERM 0
 
+// All combos are specified from the base layer, saves space
+#define COMBO_ONLY_FROM_LAYER 0
+
 /* RGB Matrix
 *  https://docs.qmk.fm/features/rgb_matrix
 */
@@ -97,7 +100,6 @@
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-
 
 #endif //RGB_MATRIX_ENABLE
 

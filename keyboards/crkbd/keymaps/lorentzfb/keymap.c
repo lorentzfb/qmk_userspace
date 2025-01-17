@@ -18,10 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "lorentzfb.h"
 
-// clang-format off
 #define LAYOUT_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 
-// KEYMAP
+// clang-format off
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
@@ -95,3 +95,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___
     )
 };
+
+// clang-format on

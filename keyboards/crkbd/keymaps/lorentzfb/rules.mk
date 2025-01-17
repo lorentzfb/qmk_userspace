@@ -1,12 +1,15 @@
 # Sea-Picro
 CONVERT_TO=promicro_rp2040
 
+# General
+REPEAT_KEY_ENABLE = yes
+
 # Userspace features override
 CAPS_WORD_ENABLE = yes
-NUM_WORD_ENABLE = yes
 COMBO_ENABLE = yes
+NUM_WORD_ENABLE = yes
 OS_DETECTION_ENABLE = no
-REPEAT_KEY_ENABLE = yes
+CUSTOM_SEQUENCES = yes
 
 # override keyboard defaults
 #   keyboards\crkbd\info.json

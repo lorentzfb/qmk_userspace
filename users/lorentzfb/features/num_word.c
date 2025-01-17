@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "num_word.h"
-// #include "keycodes.h"
 
 static uint16_t num_word_timer;
 static bool _num_word_enabled = false;

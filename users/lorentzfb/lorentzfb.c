@@ -1,12 +1,11 @@
 #include "lorentzfb.h"
 
+#ifdef NUM_WORD_ENABLE
+#   include "features/num_word.h"
+#endif
 
 // Keeps track of the detected OS
 // static os_variant_t host_os = OS_UNSURE;
-
-#ifdef NUM_WORD_ENABLE
-#include "features/num_word.h"
-#endif
 
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t* record) {
@@ -14,7 +13,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t* record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    #if defined(NUM_WORD_ENABLE)
+    #ifdef NUM_WORD_ENABLE
     if (!process_num_word(keycode, record)) {
         return false;
     }
@@ -26,13 +25,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             layer_off(_NUMBER);
             return false;
     }
-    #endif
+    #endif // NUM_WORD_ENABLE
 
-    if (!process_record_keymap(keycode, record)) {
-        return false;
-    }
-
-    #ifdef LORENTZ_CUSTOM_SEQUENCES
+    #ifdef CUSTOM_SEQUENCES_ENABLE
     switch (keycode) {
         case ARRFAT:
             if (record->event.pressed) {
@@ -66,9 +61,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //     }
         //     return false;
     }
-    #endif
+    #endif // CUSTOM_SEQUENCES_ENABLE
 
-    return true;
+    return process_record_keymap(keycode, record);
 }
 
 // bool process_detected_host_os_kb(os_variant_t detected_os) {

@@ -25,8 +25,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RP2040_FLASH_GD25Q64CS
 
 //#define USE_MATRIX_I2C
-
-// All combos are specified from the base layer, saves space
-#define COMBO_ONLY_FROM_LAYER 0
-
-#define LORENTZ_CUSTOM_SEQUENCES
