@@ -1,0 +1,161 @@
+combos:
+  - { p: [14, 15], k: "{", l: ["Default"] }
+  - { p: [15, 16], k: "(", l: ["Default"] }
+  - { p: [19, 20], k: ")", l: ["Default"] }
+  - { p: [20, 21], k: "}", l: ["Default"] }
+  - { p: [26, 27], k: "<", l: ["Default"] }
+  - { p: [27, 28], k: "[", l: ["Default"] }
+  - { p: [31, 32], k: "]", l: ["Default"] }
+  - { p: [32, 33], k: ">", l: ["Default"] }
+  # - { p: [27, 32], k: "CW", a: bottom, l: ["Default"], offset: 2.5 }
+  - { p: [3, 16], k: "CW", l: ["Default"] }
+  - { p: [38, 39], k: "NUM", a: top, offset: 0.5, l: ["Default"] }
+draw_config:
+  key_w: 60
+  key_h: 56
+  split_gap: 30
+  combo_w: 28
+  combo_h: 26
+  key_rx: 6
+  key_ry: 6
+  dark_mode: false # Or "auto"
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2
+  inner_pad_h: 2
+  outer_pad_w: 0
+  outer_pad_h: 20
+  line_spacing: 1.2
+  arc_radius: 6
+  append_colon_to_layer_header: false
+  small_pad: 2
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: var(--surface-1);
+    }
+
+    /* font and background color specifications */
+    svg.keymap {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        font-size: 16px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: var(--surface-1);
+    }
+
+    /* default key styling */
+    rect.key {
+        fill: var(--gb-fg1);
+    }
+
+    rect.trans {
+        fill: var(--gb-fg3);
+    }
+
+    rect.dead {
+        fill: var(--surface-3);
+    }
+
+    rect.key {
+        stroke: var(--gb-purple-1);
+        stroke-width: 0;
+    }
+
+    rect.combo {
+        stroke: var(--gb-green-1);
+        stroke-width: 2;
+    }
+
+    /* default key side styling, only used is draw_key_sides is set */
+    rect.side {
+        filter: brightness(90%);
+    }
+
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+        fill: var(--gb-fg2);
+    }
+
+    /* color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: var(--gb-purple-2);
+    }
+
+    /* color accent for ghost (optional) keys */
+    rect.ghost, rect.combo.ghost {
+        stroke-dasharray: 4, 4;
+        stroke-width: 2;
+    }
+
+    text {
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    /* styling for layer labels */
+    text.label {
+        font-weight: bold;
+        text-anchor: start;
+        fill: var(--gb-purple-1);
+    }
+
+    /* styling for optional footer */
+    text.footer {
+        text-anchor: end;
+        dominant-baseline: auto;
+        stroke: white;
+        stroke-width: 4;
+        paint-order: stroke;
+    }
+
+    /* styling for combo tap, and key hold/shifted label text */
+    text.combo, text.hold, text.shifted {
+        font-size: 11px;
+    }
+
+    text.hold {
+        text-anchor: middle;
+        dominant-baseline: auto;
+    }
+
+    text.shifted {
+        text-anchor: middle;
+        dominant-baseline: hanging;
+    }
+
+    text.layer-activator.hold {
+        # text-decoration: underline;
+        font-weight: var(--font-weight-9);
+        fill: var(--gb-purple-1);
+    }
+
+    /* styling for hold/shifted label text in combo box */
+    text.combo.hold, text.combo.shifted {
+        font-size: 8px;
+    }
+
+    /* lighter symbol for transparent keys */
+    text.trans {
+        fill: var(--surface-4);
+    }
+
+    /* styling for combo dendrons */
+    path.combo {
+        stroke-width: 2;
+        stroke: var(--gb-green-1);
+        fill: none;
+    }
+
+    /* Start Tabler Icons Cleanup */
+    /* cannot use height/width with glyphs */
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: 2;
+    }
+    /* hide tabler's default box */
+    .icon-tabler > path[stroke="none"][fill="none"] {
+        visibility: hidden;
+    }

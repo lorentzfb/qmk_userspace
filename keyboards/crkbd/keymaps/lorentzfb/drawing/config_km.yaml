@@ -1,0 +1,20 @@
+layout: { layout_name: LAYOUT_split_3x6_3 }
+layers:
+  Default: []
+  Norwegian: []
+  Number: []
+  Symbol:
+    - key: 15
+      type: held
+    - key: 20
+      type: held
+  Navigation:
+    - key: 38
+      type: held
+  Function: []
+  Media:
+    - key: 37
+      type: held
+  Adjust:
+    - key: 40
+      type: held

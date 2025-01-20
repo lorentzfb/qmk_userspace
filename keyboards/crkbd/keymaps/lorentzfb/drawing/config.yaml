@@ -1,3 +1,4 @@
+# https://github.com/caksoylar/keymap-drawer/blob/v0.20.0/CONFIGURATION.md
 layout: { qmk_keyboard: crkbd/rev1, layout_name: LAYOUT_split_3x6_3 }
 layers:
   BASE:
@@ -30,20 +31,20 @@ layers:
       { h: MED, t: Z },
       X,
       C,
-      V,
+      { h: MEH, t: V },
       B,
       N,
       M,
       ",",
       .,
       /,
-      $$mdi:keyboard-esc$$,
+      HYPR,
       $$mdi:keyboard-esc$$,
       { h: NAV, t: $$mdi:backspace-outline$$ },
       $$mdi:keyboard-space$$,
       $$mdi:keyboard-return$$,
       "-",
-      ALT,
+      REP,
     ]
   NOR:
     - { t: ▽, type: trans }
@@ -89,19 +90,19 @@ layers:
     - { t: ▽, type: trans }
     - ;
   NUM:
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - ^
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - { t: ▽, type: trans }
     - J
     - K
     - "%"
     - { t: ▽, type: trans }
     - $$mdi:backspace-outline$$
-    - ""
+    - { type: dead }
     - "6"
     - "4"
     - "0"
@@ -112,19 +113,19 @@ layers:
     - "1"
     - "5"
     - "7"
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - { t: ▽, type: trans }
     - +
     - "8"
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - "9"
     - { t: ▽, type: trans }
     - { t: ▽, type: trans }
     - { t: ▽, type: trans }
-    - ""
+    - { type: dead }
     - CANCEL
     - $$mdi:backspace-outline$$
     - { t: ▽, type: trans }
@@ -132,62 +133,62 @@ layers:
     - { t: ▽, type: trans }
     - _
   SYM:
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - ^
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - "%"
-    - ""
+    - { type: dead }
     - $$mdi:backspace-outline$$
-    - ""
+    - { type: dead }
     - "@"
     - "~"
     - { t: $, type: held }
     - "!"
-    - ""
+    - { type: dead }
     - "*"
     - "&"
     - { t: "#", type: held }
-    - ""
+    - { type: dead }
     - "|"
     - "`"
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - +
     - =>
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - ->
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - \
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - BSPC
     - { t: ▽, type: trans }
     - "="
     - { t: ▽, type: trans }
-    - ""
+    - { type: dead }
   NAV:
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
     - { h: ⌘S, t: Save }
-    - ""
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - WS DECR
     - WS INC
     - PRNT3
     - PRNT4
     - PRNT5
-    - ""
+    - { type: dead }
     - { h: ⌘Z, t: Undo }
     - { h: ⌘X, t: Cut }
     - { h: ⌘C, t: Copy }
@@ -197,160 +198,158 @@ layers:
     - DOWN
     - UP
     - RGHT
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - TG( NOR)
     - CMDD
     - CMDI
-    - ""
-    - ""
-    - ""
-    - ""
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
     - { type: held }
     - { t: ▽, type: trans }
     - RAYCA
     - MO( ADJ)
-    - ""
+    - { type: dead }
   FN:
-    [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      F6,
-      F4,
-      F10,
-      F2,
-      F12,
-      F11,
-      F3,
-      F1,
-      F5,
-      F7,
-      "",
-      "",
-      "",
-      "",
-      "",
-      F8,
-      "",
-      "",
-      F9,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-    ]
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - F6
+    - F4
+    - F10
+    - F2
+    - F12
+    - F11
+    - F3
+    - F1
+    - F5
+    - F7
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - F8
+    - { type: dead }
+    - { type: dead }
+    - F9
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
+    - { type: dead }
   MED:
     [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       BRID,
-      "",
+      { type: dead },
       BRIU,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       VOLD,
       MUTE,
       VOLU,
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
       { type: held },
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       MPRV,
       MPLY,
       MNXT,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
     ]
   ADJ:
     [
       CG TOGG,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       RGB TOG,
       RGB HUI,
       RGB SAI,
       RGB VAI,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       RGB MOD,
       RGB HUD,
       RGB SAD,
       RGB VAD,
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
+      { type: dead },
       { type: held },
-      "",
+      { type: dead },
     ]
 combos:
   - { p: [14, 15], k: "{", l: ["BASE"] }
@@ -361,5 +360,155 @@ combos:
   - { p: [27, 28], k: "[", l: ["BASE"] }
   - { p: [31, 32], k: "]", l: ["BASE"] }
   - { p: [32, 33], k: ">", l: ["BASE"] }
-  - { p: [27, 32], k: "CW", a: bottom, l: ["BASE"], offset: 2.5 }
+  # - { p: [27, 32], k: "CW", a: bottom, l: ["BASE"], offset: 2.5 }
+  - { p: [3, 16], k: "CW", l: ["BASE"] }
   - { p: [38, 39], k: "NUM", a: top, offset: 0.5, l: ["BASE"] }
+draw_config:
+  key_w: 60
+  key_h: 56
+  split_gap: 30
+  combo_w: 28
+  combo_h: 26
+  key_rx: 6
+  key_ry: 6
+  dark_mode: false # Or "auto"
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2
+  inner_pad_h: 2
+  outer_pad_w: 0
+  outer_pad_h: 20
+  line_spacing: 1.2
+  arc_radius: 6
+  append_colon_to_layer_header: false
+  small_pad: 2
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: var(--surface-1);
+    }
+
+    /* font and background color specifications */
+    svg.keymap {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        font-size: 16px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: var(--surface-1);
+    }
+
+    /* default key styling */
+    rect.key {
+        fill: var(--gb-fg1);
+    }
+
+    rect.trans {
+        fill: var(--gb-fg3);
+    }
+
+    rect.dead {
+        fill: var(--surface-3);
+    }
+
+    rect.key {
+        stroke: var(--gb-purple-1);
+        stroke-width: 0;
+    }
+
+    rect.combo {
+        stroke: var(--gb-green-1);
+        stroke-width: 2;
+    }
+
+    /* default key side styling, only used is draw_key_sides is set */
+    rect.side {
+        filter: brightness(90%);
+    }
+
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+        fill: var(--gb-fg2);
+    }
+
+    /* color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: var(--gb-purple-2);
+    }
+
+    /* color accent for ghost (optional) keys */
+    rect.ghost, rect.combo.ghost {
+        stroke-dasharray: 4, 4;
+        stroke-width: 2;
+    }
+
+    text {
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    /* styling for layer labels */
+    text.label {
+        font-weight: bold;
+        text-anchor: start;
+        fill: var(--gb-purple-1);
+    }
+
+    /* styling for optional footer */
+    text.footer {
+        text-anchor: end;
+        dominant-baseline: auto;
+        stroke: white;
+        stroke-width: 4;
+        paint-order: stroke;
+    }
+
+    /* styling for combo tap, and key hold/shifted label text */
+    text.combo, text.hold, text.shifted {
+        font-size: 11px;
+    }
+
+    text.hold {
+        text-anchor: middle;
+        dominant-baseline: auto;
+    }
+
+    text.shifted {
+        text-anchor: middle;
+        dominant-baseline: hanging;
+    }
+
+    text.layer-activator {
+        # text-decoration: underline;
+        font-weight: var(--font-weight-9);
+        fill: var(--gb-purple-1);
+    }
+
+    /* styling for hold/shifted label text in combo box */
+    text.combo.hold, text.combo.shifted {
+        font-size: 8px;
+    }
+
+    /* lighter symbol for transparent keys */
+    text.trans {
+        fill: var(--surface-4);
+    }
+
+    /* styling for combo dendrons */
+    path.combo {
+        stroke-width: 2;
+        stroke: var(--gb-green-1);
+        fill: none;
+    }
+
+    /* Start Tabler Icons Cleanup */
+    /* cannot use height/width with glyphs */
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: 2;
+    }
+    /* hide tabler's default box */
+    .icon-tabler > path[stroke="none"][fill="none"] {
+        visibility: hidden;
+    }
