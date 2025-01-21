@@ -1,4 +1,5 @@
-layout: { layout_name: LAYOUT_split_3x6_3 }
+layout:
+  layout_name: LAYOUT_split_3x6_3
 layers:
   Default: []
   Norwegian: []
@@ -9,7 +10,7 @@ layers:
     - key: 20
       type: held
   Navigation:
-    - key: 38
+    - key: 37
       type: held
   Function: []
   Media:

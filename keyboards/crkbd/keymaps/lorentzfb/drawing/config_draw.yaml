@@ -30,15 +30,21 @@ draw_config:
   arc_radius: 6
   append_colon_to_layer_header: false
   small_pad: 2
+  shrink_wide_legends: 4
+  glyph_tap_size: 20
   svg_style: |
-    /* inherit to force styles through use tags */
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
     svg path {
         fill: var(--surface-1);
     }
 
     /* font and background color specifications */
     svg.keymap {
-        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        font-family: "JetBrains Mono", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
         font-size: 16px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;

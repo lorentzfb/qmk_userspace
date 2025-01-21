@@ -1,23 +1,49 @@
 import { z } from "https://deno.land/x/zod@v3.24.1/mod.ts";
-import { parse, stringify } from "jsr:@std/yaml";
+import * as yaml from "npm:js-yaml";
 
 const keyOverrideSchema = z.object({
     key: z.number(),
-    type: z.enum(["held"]),
+    type: z.enum(["held", "trans", "dead"]).optional(),
+    t: z.string().optional(),
+    h: z.string().optional(),
+    s: z.string().optional(),
 });
 
 type KeyOverride = z.infer<typeof keyOverrideSchema>;
 
-const ovSchema = z.object({});
+const overridesSchema = z.object({
+    layout: z.object({
+        qmk_keyboard: z.string().optional(),
+        layout_name: z.string().optional(),
+    }).optional(),
+    layers: z.record(z.array(keyOverrideSchema)),
+});
 
-type OverridesYaml = {
-    layout: {
-        layout_name: string;
-    };
-    layers: {
-        [key: string]: KeyOverride;
-    };
-};
+type Overrides = z.infer<typeof overridesSchema>;
+
+const configLayerKeySchema = z.union([
+    z.string(),
+    z.object({
+        t: z.string().optional(),
+        h: z.string().optional(),
+        s: z.string().optional(),
+        type: z.string().optional(),
+    }),
+]);
+
+type ConfigLayerKey = z.infer<typeof configLayerKeySchema>;
+
+const configSchema = z.object({
+    layout: z.object({
+        layout_name: z.string(),
+        qmk_keyboard: z.string(),
+    }),
+    layers: z.record(z.array(configLayerKeySchema)),
+});
+
+type Config = z.infer<typeof configSchema>;
+
+// Check args
 
 const args = Deno.args;
 
@@ -25,34 +51,94 @@ if (args.length != 2) {
     console.error("Please provide the required arguments.");
     Deno.exit(1);
 }
+
+// Yaml paths
+
 const overridesYaml = args[0];
 const configYaml = args[1];
 
-let ov: OverridesYaml;
+// Read and parse the config_km.yaml
+
+let ov: Overrides;
 
 try {
     const fileContent = await Deno.readTextFile(overridesYaml);
-    ov = parse(fileContent);
+    const parsedYaml = yaml.load(fileContent);
+    ov = overridesSchema.parse(parsedYaml);
 } catch (e) {
     console.error(e);
+    console.error(`Error: failed to parse ${overridesYaml}`);
     Deno.exit(1);
 }
 
-console.log(JSON.stringify(ov));
+// Read and parse the config.yaml
 
-// try {
-//     // Read the JSON file
-//     const fileContent = await Deno.readTextFile(keymapPath);
-//     const data = JSON.parse(fileContent);
+let config: Config;
 
-//     // Access and modify the desired element
-//     data.layers[1][4] = "NEW_VALUE"; // Change string number 5 (index 4) in array 2 (index 1)
+try {
+    const fileContent = await Deno.readTextFile(configYaml);
+    const parsedYaml = yaml.load(fileContent);
+    // console.log(parsedYaml);
+    config = configSchema.parse(parsedYaml);
+} catch (e) {
+    console.error(e);
+    console.error(`Error: failed to parse ${configYaml}`);
+    Deno.exit(1);
+}
 
-//     // Save the updated JSON back to the file
-//     const updatedContent = JSON.stringify(data, null, 4);
-//     await Deno.writeTextFile(keymapPath, updatedContent);
+// Update 'layout' if any ovverides has been set
+if (ov.layout) {
+    config.layout = {
+        ...config.layout,
+        ...(ov.layout.qmk_keyboard && { qmk_keyboard: ov.layout.qmk_keyboard }),
+        ...(ov.layout.layout_name && { layout_name: ov.layout.layout_name }),
+    };
+}
 
-//     console.log("String updated successfully!");
-// } catch (error) {
-//     console.error("Error:", error.message);
-// }
+// Get layer names from ovverrides
+const layerNames = Object.keys(ov.layers);
+
+if (layerNames.length != Object.keys(config.layers).length) {
+    console.error(
+        `Error: number of layers in ${configYaml} and ${overridesYaml} is not equal`,
+    );
+    Deno.exit(1);
+}
+
+// Update layer names in config
+Object.entries(config.layers).forEach((k, i) => {
+    k[0] = layerNames[i];
+});
+
+// Apply key ovverides in each layer
+const layerKeys = Object.values(ov.layers);
+
+const transformedLayers = Object.entries(config.layers).reduce<
+    typeof config.layers
+>(
+    (acc, [_key, value], i) => {
+        layerKeys[i].forEach((k) => {
+            const a = { ...k };
+            Reflect.deleteProperty(a, "key");
+            value[k.key] = a;
+        });
+
+        acc[layerNames[i]] = value;
+        return acc;
+    },
+    {},
+);
+
+config.layers = transformedLayers;
+
+// Write the transformed config.yaml
+
+const convertedConfig = yaml.dump(config);
+
+try {
+    await Deno.writeTextFile(configYaml, convertedConfig);
+} catch (e) {
+    console.error(e);
+    console.error(`Error: failed to parse ${configYaml}`);
+    Deno.exit(1);
+}
