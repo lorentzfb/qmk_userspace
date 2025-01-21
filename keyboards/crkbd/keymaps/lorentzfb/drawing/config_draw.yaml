@@ -9,7 +9,14 @@ combos:
   - { p: [32, 33], k: ">", l: ["Default"] }
   # - { p: [27, 32], k: "CW", a: bottom, l: ["Default"], offset: 2.5 }
   - { p: [3, 16], k: "CW", l: ["Default"] }
-  - { p: [38, 39], k: "NUM", a: top, offset: 0.5, l: ["Default"] }
+  - {
+      p: [38, 39],
+      k: "NW",
+      a: top,
+      offset: 0.5,
+      l: ["Default"],
+      type: layer-activator,
+    }
 draw_config:
   key_w: 60
   key_h: 56
@@ -132,11 +139,14 @@ draw_config:
     }
 
     text.layer-activator.hold {
-        # text-decoration: underline;
         font-weight: var(--font-weight-9);
         fill: var(--gb-purple-1);
     }
 
+    text.combo.layer-activator {
+        font-weight: var(--font-weight-9);
+        fill: var(--gb-purple-1);
+    }
     /* styling for hold/shifted label text in combo box */
     text.combo.hold, text.combo.shifted {
         font-size: 8px;

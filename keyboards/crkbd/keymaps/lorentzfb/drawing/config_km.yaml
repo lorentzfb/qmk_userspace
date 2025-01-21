@@ -3,19 +3,32 @@ layout:
 layers:
   Default: []
   Norwegian: []
-  Number: []
+  Number:
+    - key: 38
+      options: { type: held, t: $$mdi:keyboard-space$$, h: CANCEL }
+    - key: 39
+      options:
+        type: held
   Symbol:
     - key: 15
-      type: held
+      options:
+        type: held
     - key: 20
-      type: held
+      options:
+        type: held
   Navigation:
     - key: 37
-      type: held
-  Function: []
+      options:
+        type: held
+  Function:
+    - key: 24
+      options:
+        type: held
   Media:
-    - key: 37
-      type: held
+    - key: 25
+      options:
+        type: held
   Adjust:
     - key: 40
-      type: held
+      options:
+        type: held

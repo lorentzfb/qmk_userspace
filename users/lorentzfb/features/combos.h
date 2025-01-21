@@ -8,7 +8,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 enum combos {
-    CCOMM_CW,    // C and , => activate Caps Word.
+    EF_CW,    // C and , => activate Caps Word.
     SPCENT_NUMW, // Toggle num word
     SD_LCBR,     // {
     XC_LABK,     // <
@@ -20,7 +20,7 @@ enum combos {
     CDOT_RABK    // >
 };
 
-const uint16_t combo_C_COMM[] PROGMEM = {KC_C, KC_COMM, COMBO_END};
+const uint16_t combo_E_F[] PROGMEM = {KC_E, HRM_F, COMBO_END};
 const uint16_t combo_SPC_ENT[] PROGMEM = {KC_SPC, KC_ENT, COMBO_END};
 
 const uint16_t combo_S_D[] PROGMEM = {HRM_S, HRM_D, COMBO_END};
@@ -36,7 +36,7 @@ const uint16_t combo_K_L[] PROGMEM = {HRM_K, HRM_L, COMBO_END};
 const uint16_t combo_COMM_DOT[] PROGMEM = {KC_COMM, KC_DOT, COMBO_END};
 
 combo_t key_combos[] = {
-    [CCOMM_CW] = COMBO(combo_C_COMM, CW_TOGG),
+    [EF_CW] = COMBO(combo_E_F, CW_TOGG),
     [SPCENT_NUMW] = COMBO(combo_SPC_ENT, NW_TOGG),
     [SD_LCBR] = COMBO(combo_S_D, KC_LCBR),
     [XC_LABK] = COMBO(combo_X_C, KC_LABK),

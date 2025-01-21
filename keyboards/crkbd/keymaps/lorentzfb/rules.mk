@@ -9,7 +9,7 @@ CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
 NUM_WORD_ENABLE = yes
 OS_DETECTION_ENABLE = no
-CUSTOM_SEQUENCES = yes
+CUSTOM_SEQUENCES_ENABLE = yes
 
 # override keyboard defaults
 #   keyboards\crkbd\info.json

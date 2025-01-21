@@ -12,6 +12,9 @@ CONFIG_OUT="${DIST}/config.yaml"
 KEYMAP_JSON="${DIST}/keymap.json"
 KEYMAP_SVG="${DIST}/keymap.svg"
 
+# Exit on any error
+set -e
+
 # Delete old build
 [[ -d "$DIST" ]] && rm -rf "${DIST}"/* || mkdir -p "$DIST"
 
