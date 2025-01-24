@@ -69,7 +69,7 @@ enum keycodes {
 // Right-hand home row mods
 #define HRM_J RSFT_T(KC_J)
 #define HRM_K LT(_SYMBOL, KC_K)
-#define HRM_L RGUI_T(KC_L)
+#define HRM_L LGUI_T(KC_L)
 #define HRM_SCN RALT_T(KC_SCLN)
 
 // Layer changes

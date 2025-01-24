@@ -3,10 +3,10 @@ combos:
   - { p: [15, 16], k: "(", l: ["Default"] }
   - { p: [19, 20], k: ")", l: ["Default"] }
   - { p: [20, 21], k: "}", l: ["Default"] }
-  - { p: [26, 27], k: "<", l: ["Default"] }
+  # - { p: [26, 27], k: "<", l: ["Default"] }
   - { p: [27, 28], k: "[", l: ["Default"] }
   - { p: [31, 32], k: "]", l: ["Default"] }
-  - { p: [32, 33], k: ">", l: ["Default"] }
+  # - { p: [32, 33], k: ">", l: ["Default"] }
   # - { p: [27, 32], k: "CW", a: bottom, l: ["Default"], offset: 2.5 }
   - { p: [3, 16], k: "CW", l: ["Default"] }
   - {
@@ -40,8 +40,6 @@ draw_config:
   shrink_wide_legends: 4
   glyph_tap_size: 20
   svg_style: |
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
     svg path {
         fill: var(--surface-1);
     }

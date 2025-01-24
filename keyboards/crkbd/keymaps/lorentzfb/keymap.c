@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
         KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
-       KC_LCTL,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
+       KC_RCTL,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
       OSL_FUNC,   MED_Z,    KC_X,    KC_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_HYPR,
 //                              +--------+--------+--------+      +--------+--------+--------+
                                    KC_ESC,  BTN_BS,  KC_SPC,         KC_ENT, KC_MINS,  QK_REP
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FUNCTION] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
+       CG_LNRM, CG_LSWP, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
        ___X___,   KC_F6,   KC_F4,  KC_F10,   KC_F2,  KC_F12,         KC_F11,   KC_F3,   KC_F1,   KC_F5,   KC_F7, ___X___,
        ___X___, ___X___, ___X___, ___X___,   KC_F8, ___X___,        ___X___,   KC_F9, ___X___, ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ADJUST] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       CG_TOGG, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___,  OS_STR, ___X___, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___,  OS_STR, ___X___, ___X___,
        RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
        RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
