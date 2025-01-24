@@ -25,7 +25,7 @@ jobs:
             {
               "ref": "main",
               "inputs": {
-                "git_sha": "$GITHUB_SHA"
+                "git_sha": "$GITHUB_SHA",
                 "keymap_svg_url": "$KEYMAP_SVG_URL",
                 "keymap_source_url": "$KEYMAP_SOURCE_URL"
               }
