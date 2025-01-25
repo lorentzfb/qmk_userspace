@@ -13,7 +13,7 @@ jobs:
       - name: Trigger Workflow in Another Repository
         run: |
           BASE="https://github.com/lorentzfb/qmk_userspace/blob/${GITHUB_SHA}/keyboards/crkbd/keymaps/lorentzfb"
-          KEYMAP_SVG_URL="${BASE}/drawing/latest/keymap.svg"
+          KEYMAP_SVG_URL="${BASE}/drawing/latest/crkbd_rev1_lorentzfb.svg"
           KEYMAP_SOURCE_URL="${BASE}/keymap.c"
           curl -L \
             -X POST \
