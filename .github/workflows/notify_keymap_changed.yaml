@@ -7,7 +7,7 @@ on:
       - "keyboards/crkbd/keymaps/lorentzfb/drawing/latest/*.svg"
 
 env:
-  KEYMAP_BASE_DIR: "https://github.com/lorentzfb/qmk_userspace/blob/${{ env.GITHUB_SHA }}/keyboards/crkbd/keymaps/lorentzfb"
+  KEYMAP_BASE_DIR: "https://github.com/lorentzfb/qmk_userspace/blob/${{ github.sha }}/keyboards/crkbd/keymaps/lorentzfb"
   KEYMAP_SVG_FILE: "drawing/latest/crkbd_rev1_lorentzfb.svg"
   KEYMAP_SOURCE_FILE: "keymap.c"
   APP_WORKFLOW_URL: "https://api.github.com/repos/lorentzfb/tastatur/actions/workflows/keymap-changed.yaml/dispatches"
