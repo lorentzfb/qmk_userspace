@@ -10,7 +10,7 @@ env:
   KEYMAP_BASE_DIR: "https://github.com/lorentzfb/qmk_userspace/blob/${{ github.sha }}/keyboards/crkbd/keymaps/lorentzfb"
   KEYMAP_SVG_FILE: "drawing/latest/crkbd_rev1_lorentzfb.svg"
   KEYMAP_SOURCE_FILE: "keymap.c"
-  APP_WORKFLOW_URL: "https://api.github.com/repos/lorentzfb/tastatur/actions/workflows/build-deploy.yaml/dispatches"
+  APP_WORKFLOW_URL: "https://api.github.com/repos/lorentzfb/tastatur/actions/workflows/build-deploy.yml/dispatches"
 
 jobs:
   trigger:
