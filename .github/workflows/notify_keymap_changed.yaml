@@ -7,10 +7,12 @@ on:
       - "keyboards/crkbd/keymaps/lorentzfb/drawing/latest/*.svg"
 
 env:
-  KEYMAP_BASE_DIR: "https://github.com/lorentzfb/qmk_userspace/blob/${{ github.sha }}/keyboards/crkbd/keymaps/lorentzfb"
-  KEYMAP_SVG_FILE: "drawing/latest/crkbd_rev1_lorentzfb.svg"
+  GITHUB_BASE: "https://github.com/lorentzfb/qmk_userspace/blob/${{ github.sha }}"
+  GITHUB_BASE_RAW: "https://raw.githubusercontent.com/lorentzfb/qmk_userspace/${{ github.sha }}"
+  KEYMAP_BASE_DIR: "keyboards/crkbd/keymaps/lorentzfb"
+  KEYMAP_SVG_FILE: "drawing/latest/crkbd_rev1_lorentzfb_unstyled.svg"
   KEYMAP_SOURCE_FILE: "keymap.c"
-  APP_WORKFLOW_URL: "https://api.github.com/repos/lorentzfb/tastatur/actions/workflows/build-deploy.yml/dispatches"
+  APP_WORKFLOW_URL: ${{ vars.APP_WORKFLOW_URL }}
 
 jobs:
   trigger:
@@ -29,8 +31,8 @@ jobs:
             "ref": "main",
             "inputs": {
               "keymap_git_sha": "$GITHUB_SHA",
-              "keymap_svg_url": "$KEYMAP_BASE_DIR/$KEYMAP_SVG_FILE",
-              "keymap_source_url": "$KEYMAP_BASE_DIR/$KEYMAP_SOURCE_FILE"
+              "keymap_svg_url": "$GITHUB_BASE_RAW/$KEYMAP_BASE_DIR/$KEYMAP_SVG_FILE",
+              "keymap_source_url": "$GITHUB_BASE/$KEYMAP_BASE_DIR/$KEYMAP_SOURCE_FILE"
             }
           }
           EOF

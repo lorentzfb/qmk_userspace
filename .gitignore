@@ -17,3 +17,6 @@ compile_commands.json
 
 # Output
 dist/
+
+# Development
+draw.dev.sh
