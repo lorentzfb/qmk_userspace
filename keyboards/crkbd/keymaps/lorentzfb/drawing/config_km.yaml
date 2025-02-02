@@ -16,6 +16,9 @@ layers:
     - key: 20
       options:
         type: held
+    - key: 40
+      options:
+        type: held
   Navigation:
     - key: 37
       options:

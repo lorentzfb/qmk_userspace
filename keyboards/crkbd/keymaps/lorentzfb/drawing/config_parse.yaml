@@ -34,6 +34,7 @@ parse_config:
       "MEH_V": { h: MEH, t: V },
       "KC_ESC": ESC,
       "BTN_BS": { h: NAV, t: $$mdi:backspace-outline$$, type: layer-activator },
+      "SYM_MINS": { h: SYM, t: "-", s: "_", type: layer-activator },
       "KC_SPC": $$mdi:keyboard-space$$,
       "KC_ENT": $$mdi:keyboard-return$$,
       "KC_BSPC": $$mdi:backspace-outline$$,

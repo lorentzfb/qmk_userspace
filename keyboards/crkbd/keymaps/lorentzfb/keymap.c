@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_RCTL,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
       OSL_FUNC,   MED_Z,    KC_X,    KC_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_HYPR,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                   KC_ESC,  BTN_BS,  KC_SPC,         KC_ENT, KC_MINS,  QK_REP
+                                   KC_ESC,  BTN_BS,  KC_SPC,         KC_ENT,SYM_MINS,  QK_REP
     ),
 
     [_NORWEGIAN] = LAYOUT_wrapper(
@@ -53,10 +53,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYMBOL] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
        ___X___, ___X___, ___X___, KC_CIRC, ___X___, ___X___,        ___X___, ___X___, ___X___, KC_PERC, ___X___, KC_BSPC,
-       ___X___,   KC_AT, KC_TILD,  KC_DLR, KC_EXLM, ___X___,        KC_ASTR, KC_AMPR, KC_HASH, ___X___, KC_PIPE,  KC_GRV,
+       ___X___,   KC_AT, KC_TILD,  KC_DLR, KC_EXLM, ___X___,        KC_ASTR, KC_AMPR, KC_HASH,  KC_EQL, KC_PIPE,  KC_GRV,
        ___X___, ___X___, ___X___, KC_PLUS,  ARRFAT, ___X___,        ___X___,  ARRSLI, ___X___, ___X___, KC_BSLS, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, KC_BSPC, _______,         KC_EQL, _______, ___X___
+                                  ___X___, KC_BSPC, _______,         KC_EQL, ___X___, ___X___
     ),
 
     [_BUTTON] = LAYOUT_wrapper(

@@ -74,6 +74,7 @@ enum keycodes {
 
 // Layer changes
 #define BTN_BS LT(_BUTTON, KC_BSPC)
+#define SYM_MINS LT(_SYMBOL, KC_MINS)
 #define MED_Z LT(_MEDIA, KC_Z)
 #define OSL_FUNC OSL(_FUNCTION)
 #define TG_NOR TG(_NORWEGIAN)
