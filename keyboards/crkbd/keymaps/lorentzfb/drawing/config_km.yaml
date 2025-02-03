@@ -10,12 +10,12 @@ layers:
       options:
         type: held
   Symbol:
-    - key: 15
-      options:
-        type: held
-    - key: 20
-      options:
-        type: held
+    # - key: 15
+    #   options:
+    #     type: held
+    # - key: 20
+    #   options:
+    #     type: held
     - key: 40
       options:
         type: held

@@ -1,8 +1,5 @@
 <svg width="840" height="2377" viewBox="0 0 840 2377" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
-<svg id="mdi:apple-keyboard-command">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-command" viewBox="0 0 24 24"><path d="M6,2A4,4 0 0,1 10,6V8H14V6A4,4 0 0,1 18,2A4,4 0 0,1 22,6A4,4 0 0,1 18,10H16V14H18A4,4 0 0,1 22,18A4,4 0 0,1 18,22A4,4 0 0,1 14,18V16H10V18A4,4 0 0,1 6,22A4,4 0 0,1 2,18A4,4 0 0,1 6,14H8V10H6A4,4 0 0,1 2,6A4,4 0 0,1 6,2M16,18A2,2 0 0,0 18,20A2,2 0 0,0 20,18A2,2 0 0,0 18,16H16V18M14,10H10V14H14V10M6,16A2,2 0 0,0 4,18A2,2 0 0,0 6,20A2,2 0 0,0 8,18V16H6M8,6A2,2 0 0,0 6,4A2,2 0 0,0 4,6A2,2 0 0,0 6,8H8V6M18,8A2,2 0 0,0 20,6A2,2 0 0,0 18,4A2,2 0 0,0 16,6V8H18Z" /></svg>
-</svg>
 <svg id="mdi:arrow-down-thin">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down-thin" viewBox="0 0 24 24"><path d="M7.03 13.92H11.03V5L13.04 4.97V13.92H17.03L12.03 18.92Z" /></svg>
 </svg>
@@ -53,7 +50,7 @@
 <g transform="translate(0, 20)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:keyboard-tab"/>
+<text x="0" y="0" class="key tap">ESC</text>
 </g>
 <g transform="translate(84, 49)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -101,22 +98,22 @@
 </g>
 <g transform="translate(28, 105)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">RCTL</text>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:keyboard-tab"/>
 </g>
 <g transform="translate(84, 105)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">A</text>
-<text x="0" y="24" class="key hold">Alt</text>
+<text x="0" y="24" class="key hold">Ctrl</text>
 </g>
 <g transform="translate(140, 91)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">S</text>
-<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
+<text x="0" y="24" class="key hold">Opt</text>
 </g>
-<g transform="translate(196, 84)" class="key layer-activator keypos-15">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-activator"/>
-<text x="0" y="0" class="key layer-activator tap">D</text>
-<text x="0" y="24" class="key layer-activator hold">SYM</text>
+<g transform="translate(196, 84)" class="key keypos-15">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">D</text>
+<text x="0" y="24" class="key hold">Cmd</text>
 </g>
 <g transform="translate(252, 91)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -136,20 +133,20 @@
 <text x="0" y="0" class="key tap">J</text>
 <text x="0" y="24" class="key hold"><tspan style="font-size: 80%">Shift</tspan></text>
 </g>
-<g transform="translate(644, 84)" class="key layer-activator keypos-20">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key layer-activator"/>
-<text x="0" y="0" class="key layer-activator tap">K</text>
-<text x="0" y="24" class="key layer-activator hold">SYM</text>
+<g transform="translate(644, 84)" class="key keypos-20">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">K</text>
+<text x="0" y="24" class="key hold">Cmd</text>
 </g>
 <g transform="translate(700, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">L</text>
-<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="12" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
+<text x="0" y="24" class="key hold">Opt</text>
 </g>
 <g transform="translate(756, 105)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">;</text>
-<text x="0" y="24" class="key hold">Alt</text>
+<text x="0" y="24" class="key hold">Ctrl</text>
 <text x="0" y="-24" class="key shifted">:</text>
 </g>
 <g transform="translate(812, 105)" class="key keypos-23">
@@ -174,6 +171,7 @@
 <g transform="translate(196, 140)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">C</text>
+<text x="0" y="24" class="key hold">HYPR</text>
 </g>
 <g transform="translate(252, 147)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -663,9 +661,9 @@
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">~</text>
 </g>
-<g transform="translate(196, 84)" class="key held keypos-15">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
-<text x="0" y="0" class="key held tap">$</text>
+<g transform="translate(196, 84)" class="key keypos-15">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">$</text>
 </g>
 <g transform="translate(252, 91)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -682,9 +680,9 @@
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">&amp;</text>
 </g>
-<g transform="translate(644, 84)" class="key held keypos-20">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
-<text x="0" y="0" class="key held tap">#</text>
+<g transform="translate(644, 84)" class="key keypos-20">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">#</text>
 </g>
 <g transform="translate(700, 91)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -749,9 +747,8 @@
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(489, 224) rotate(-30.0)" class="key keypos-39">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
-<text x="0" y="0" class="key tap">=</text>
+<g transform="translate(489, 224) rotate(-30.0)" class="key dead keypos-39">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key dead"/>
 </g>
 <g transform="translate(554, 213) rotate(-15.0)" class="key held keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
@@ -773,7 +770,7 @@
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap"><tspan style="font-size: 80%">Write</tspan></text>
-<text x="0" y="24" class="key hold">⌘S</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 80%">⌘/⎈ S</tspan></text>
 </g>
 <g transform="translate(196, 28)" class="key dead keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
@@ -781,35 +778,29 @@
 <g transform="translate(252, 35)" class="key dead keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
-<g transform="translate(308, 42)" class="key dead keypos-5">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
+<g transform="translate(308, 42)" class="key keypos-5">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 80%">PRNT4</tspan></text>
 </g>
 <g transform="translate(532, 42)" class="key dead keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
 <g transform="translate(588, 35)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">WS</tspan><tspan x="0" dy="1.2em">DECR</tspan>
-</text>
+<text x="0" y="0" class="key tap">⌥⇧-</text>
 </g>
 <g transform="translate(644, 28)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">WS</tspan><tspan x="0" dy="1.2em">INC</tspan>
-</text>
+<text x="0" y="0" class="key tap">⌥⇧+</text>
 </g>
-<g transform="translate(700, 35)" class="key keypos-9">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 80%">PRNT3</tspan></text>
+<g transform="translate(700, 35)" class="key dead keypos-9">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
-<g transform="translate(756, 49)" class="key keypos-10">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 80%">PRNT4</tspan></text>
+<g transform="translate(756, 49)" class="key dead keypos-10">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
-<g transform="translate(812, 49)" class="key keypos-11">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 80%">PRNT5</tspan></text>
+<g transform="translate(812, 49)" class="key dead keypos-11">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
 <g transform="translate(28, 105)" class="key dead keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
@@ -817,22 +808,22 @@
 <g transform="translate(84, 105)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Undo</text>
-<text x="0" y="24" class="key hold">⌘Z</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 80%">⌘/⎈ Z</tspan></text>
 </g>
 <g transform="translate(140, 91)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Cut</text>
-<text x="0" y="24" class="key hold">⌘X</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 80%">⌘/⎈ X</tspan></text>
 </g>
 <g transform="translate(196, 84)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Copy</text>
-<text x="0" y="24" class="key hold">⌘C</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 80%">⌘/⎈ C</tspan></text>
 </g>
 <g transform="translate(252, 91)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap"><tspan style="font-size: 80%">Paste</tspan></text>
-<text x="0" y="24" class="key hold">⌘V</text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 80%">⌘/⎈ V</tspan></text>
 </g>
 <g transform="translate(308, 98)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -869,13 +860,11 @@
 <g transform="translate(140, 147)" class="key dead keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
-<g transform="translate(196, 140)" class="key keypos-27">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">HYPR</text>
+<g transform="translate(196, 140)" class="key dead keypos-27">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
-<g transform="translate(252, 147)" class="key keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">MEH</text>
+<g transform="translate(252, 147)" class="key dead keypos-28">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
 </g>
 <g transform="translate(308, 154)" class="key dead keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>
@@ -888,11 +877,11 @@
 </g>
 <g transform="translate(588, 147)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">CMDD</text>
+<text x="0" y="0" class="key tap">⌘-</text>
 </g>
 <g transform="translate(644, 140)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">CMDI</text>
+<text x="0" y="0" class="key tap">⌘+</text>
 </g>
 <g transform="translate(700, 147)" class="key dead keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key dead"/>

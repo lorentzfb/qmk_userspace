@@ -53,11 +53,12 @@ enum keycodes {
 #define ___X_6_______________________________________________ ___X___, ___X___, ___X___, ___X___, ___X___, ___X___
 #define ___PASS_6____________________________________________ _______, _______, _______, _______, _______, _______
 
+// https://docs.qmk.fm/mod_tap
 
 // Left-hand home row mods
-#define HRM_A LALT_T(KC_A)
-#define HRM_S LGUI_T(KC_S)
-#define HRM_D LT(_SYMBOL, KC_D)
+#define HRM_A RCTL_T(KC_A)
+#define HRM_S LALT_T(KC_S)
+#define HRM_D LGUI_T(KC_D)
 #define HRM_F LSFT_T(KC_F)
 
 // Meh = Left Control + Shift + Alt
@@ -65,12 +66,13 @@ enum keycodes {
 
 // MEH on V
 #define MEH_V MEH_T(KC_V)
+#define HYPR_C HYPR_T(KC_C)
 
 // Right-hand home row mods
 #define HRM_J RSFT_T(KC_J)
-#define HRM_K LT(_SYMBOL, KC_K)
-#define HRM_L LGUI_T(KC_L)
-#define HRM_SCN RALT_T(KC_SCLN)
+#define HRM_K LGUI_T(KC_K)
+#define HRM_L RALT_T(KC_L)
+#define HRM_SCN RCTL_T(KC_SCLN)
 
 // Layer changes
 #define BTN_BS LT(_BUTTON, KC_BSPC)
@@ -85,9 +87,9 @@ enum keycodes {
 #define WS_DECR LALT(LSFT(KC_MINS))
 
 // Mac print screen
-#define PRNT3 LSFT(LGUI(KC_3))
+// #define PRNT3 LSFT(LGUI(KC_3))
 #define PRNT4 LSFT(LGUI(KC_4))
-#define PRNT5 LSFT(LGUI(KC_5))
+// #define PRNT5 LSFT(LGUI(KC_5))
 
 // Cut, Copy, Paste, Undo
 // Moved to home row

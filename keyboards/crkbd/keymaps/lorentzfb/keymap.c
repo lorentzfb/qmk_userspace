@@ -25,9 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
-       KC_RCTL,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
-      OSL_FUNC,   MED_Z,    KC_X,    KC_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_HYPR,
+        KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
+        KC_TAB,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
+      OSL_FUNC,   MED_Z,    KC_X,  HYPR_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_HYPR,
 //                              +--------+--------+--------+      +--------+--------+--------+
                                    KC_ESC,  BTN_BS,  KC_SPC,         KC_ENT,SYM_MINS,  QK_REP
     ),
@@ -56,14 +56,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        ___X___,   KC_AT, KC_TILD,  KC_DLR, KC_EXLM, ___X___,        KC_ASTR, KC_AMPR, KC_HASH,  KC_EQL, KC_PIPE,  KC_GRV,
        ___X___, ___X___, ___X___, KC_PLUS,  ARRFAT, ___X___,        ___X___,  ARRSLI, ___X___, ___X___, KC_BSLS, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, KC_BSPC, _______,         KC_EQL, ___X___, ___X___
+                                  ___X___, KC_BSPC, _______,        ___X___, ___X___, ___X___
     ),
 
     [_BUTTON] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       ___X___, ___X___,   SSAVE, ___X___, ___X___, ___X___,        ___X___, WS_DECR,  WS_INC,   PRNT3,   PRNT4,   PRNT5,
+       ___X___, ___X___,   SSAVE, ___X___, ___X___,   PRNT4,        ___X___, WS_DECR,  WS_INC, ___X___, ___X___, ___X___,
        ___X___,    SUND,    SCUT,    SCPY,    SPST, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
-       ___X___, ___X___, ___X___, KC_HYPR,  KC_MEH, ___X___,         TG_NOR,    CMDD,    CMDI, ___X___, ___X___, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,         TG_NOR,    CMDD,    CMDI, ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
                                   ___X___, ___X___, _______,          RAYCA,  MO_ADJ, ___X___
     ),
