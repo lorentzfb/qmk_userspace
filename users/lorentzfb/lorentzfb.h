@@ -102,8 +102,8 @@ enum keycodes {
 #define RAYCA MEH(KC_R)
 
 // Increase/decrease buffer size
-#define CMDI LGUI(KC_MINS)
-#define CMDD LGUI(KC_PLUS)
+#define CMDI LGUI(KC_PLUS)
+#define CMDD LGUI(KC_MINS)
 
 // Save/write
 #define SSAVE LGUI(KC_S)
