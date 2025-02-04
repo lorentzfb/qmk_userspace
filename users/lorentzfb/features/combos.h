@@ -27,7 +27,7 @@ const uint16_t combo_S_D[] PROGMEM = {HRM_S, HRM_D, COMBO_END};
 // const uint16_t combo_X_C[] PROGMEM = {KC_X, KC_C, COMBO_END};
 
 const uint16_t combo_D_F[] PROGMEM = {HRM_D, HRM_F, COMBO_END};
-const uint16_t combo_C_V[] PROGMEM = {KC_C, MEH_V, COMBO_END};
+const uint16_t combo_C_V[] PROGMEM = {HYPR_C, MEH_V, COMBO_END};
 
 const uint16_t combo_J_K[] PROGMEM = {HRM_J, HRM_K, COMBO_END};
 const uint16_t combo_M_COMM[] PROGMEM = {KC_M, KC_COMM, COMBO_END};
