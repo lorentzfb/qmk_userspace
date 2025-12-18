@@ -56,7 +56,7 @@ enum keycodes {
 // https://docs.qmk.fm/mod_tap
 
 // Left-hand home row mods
-#define HRM_A RCTL_T(KC_A)
+#define HRM_A LCTL_T(KC_A)
 #define HRM_S LALT_T(KC_S)
 #define HRM_D LGUI_T(KC_D)
 #define HRM_F LSFT_T(KC_F)
@@ -70,12 +70,13 @@ enum keycodes {
 
 // Right-hand home row mods
 #define HRM_J RSFT_T(KC_J)
-#define HRM_K LGUI_T(KC_K)
+#define HRM_K RGUI_T(KC_K)
 #define HRM_L RALT_T(KC_L)
 #define HRM_SCN RCTL_T(KC_SCLN)
 
 // Layer changes
 #define BTN_BS LT(_BUTTON, KC_BSPC)
+#define NUM_SPC LT(_NUMBER, KC_SPC)
 #define SYM_MINS LT(_SYMBOL, KC_MINS)
 #define MED_Z LT(_MEDIA, KC_Z)
 #define OSL_FUNC OSL(_FUNCTION)
