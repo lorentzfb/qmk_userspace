@@ -1,12 +1,15 @@
 #pragma once
 
+// https://docs.qmk.fm/feature_userspace
+// https://github.com/plodah/qmk_userspace/tree/main/users/plodah
+
 #include <stdint.h>
 #include QMK_KEYBOARD_H
 
 
 // #include "os_detection.h"
 // #include "quantum/caps_word.h"
-// #include "quantum.h"
+#include "quantum.h"
 // #include "quantum_keycodes.h"
 // #include "action_layer.h"
 
@@ -15,16 +18,20 @@
 // #include "quantum/quantum_keycodes.h"
 
 enum layers {
-    _QWERTY = 0,
-    FIRST_DEFAULT_LAYER = 0,
+    _MAC = 0,
+    _WIN,
+    _MAC_BTN,
+    _WIN_BTN,
     _NORWEGIAN,
     _NUMBER,
     _SYMBOL,
-    _BUTTON,
     _FUNCTION,
     _MEDIA,
     _ADJUST
 };
+
+#define DF_MAC PDF(0)
+#define DF_WIN PDF(1)
 
 // https://docs.qmk.fm/custom_quantum_functions#defining-a-new-keycode
 enum keycodes {
@@ -32,51 +39,52 @@ enum keycodes {
     ARRSLI, // ->
     NW_TOGG,
     CANCEL,
-    OS_STR,
+    OS_STR
 };
 
 #define ___X___ KC_NO
 
-//      _1______, 2______, 3______,
-#define ___X_3____________________ ___X___, ___X___, ___X___
-#define ___PASS_3_________________ _______, _______, _______
-
-//      _1______, 2______, 3______, 4______,
-#define ___X_4_____________________________ ___X___, ___X___, ___X___, ___X___
-#define ___PASS_4__________________________ _______, _______, _______, _______
-
-//      _1______, 2______, 3______, 4______, 5______,
-#define ___X_5______________________________________ ___X___, ___X___, ___X___, ___X___, ___X___
-#define ___PASS_5___________________________________ _______, _______, _______, _______, _______
-
-//      _1______, 2______, 3______, 4______, 5______, 6______,
-#define ___X_6_______________________________________________ ___X___, ___X___, ___X___, ___X___, ___X___, ___X___
-#define ___PASS_6____________________________________________ _______, _______, _______, _______, _______, _______
-
 // https://docs.qmk.fm/mod_tap
+// _MAC home row mods
 
-// Left-hand home row mods
-#define HRM_A LCTL_T(KC_A)
-#define HRM_S LALT_T(KC_S)
-#define HRM_D LGUI_T(KC_D)
-#define HRM_F LSFT_T(KC_F)
+#define MAC_A LCTL_T(KC_A)
+#define MAC_S LOPT_T(KC_S)
+#define MAC_D CMD_T(KC_D)
+#define MAC_F LSFT_T(KC_F)
+
+#define MAC_J RSFT_T(KC_J)
+#define MAC_K CMD_T(KC_K)
+#define MAC_L ROPT_T(KC_L)
+#define MAC_SCN RCTL_T(KC_SCLN)
+
+// _WIN home row mods
+
+#define WIN_A LCTL_T(KC_A)
+#define WIN_S LOPT_T(KC_S)
+#define WIN_D LCTL_T(KC_D)
+#define WIN_F LSFT_T(KC_F)
+
+#define WIN_J RSFT_T(KC_J)
+#define WIN_K RCTL_T(KC_K)
+#define WIN_L RALT_T(KC_L)
+#define WIN_SCN RCTL_T(KC_SCLN)
 
 // Meh = Left Control + Shift + Alt
 // Hyper = Left Control + Shift + Alt + Gui/Cmd/Winkey
 
-// MEH on V
 #define MEH_V MEH_T(KC_V)
 #define HYPR_C HYPR_T(KC_C)
 
-// Right-hand home row mods
-#define HRM_J RSFT_T(KC_J)
-#define HRM_K RGUI_T(KC_K)
-#define HRM_L RALT_T(KC_L)
-#define HRM_SCN RCTL_T(KC_SCLN)
+// Tap Dance declarations
+enum {
+    TD_2_COMM,
+    TD_3_DOT
+};
 
 // Layer changes
-#define BTN_BS LT(_BUTTON, KC_BSPC)
-#define NUM_SPC LT(_NUMBER, KC_SPC)
+// #define BTN_BS LT(_BUTTON, KC_BSPC)
+// #define BTN_ESC LT(_BUTTON, KC_ESC)
+#define NUM_ESC LT(_NUMBER, KC_ESC)
 #define SYM_MINS LT(_SYMBOL, KC_MINS)
 #define MED_Z LT(_MEDIA, KC_Z)
 #define OSL_FUNC OSL(_FUNCTION)

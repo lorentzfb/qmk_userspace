@@ -23,13 +23,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_QWERTY] = LAYOUT_wrapper(
+    [_MAC] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
         KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
-        KC_TAB,   HRM_A,   HRM_S,   HRM_D,   HRM_F,    KC_G,           KC_H,   HRM_J,   HRM_K,   HRM_L, HRM_SCN, KC_QUOT,
+        KC_TAB,   MAC_A,   MAC_S,   MAC_D,   MAC_F,    KC_G,           KC_H,   MAC_J,   MAC_K,   MAC_L, MAC_SCN, KC_QUOT,
       OSL_FUNC,   MED_Z,    KC_X,  HYPR_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_HYPR,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                   KC_ESC,  BTN_BS, NUM_SPC,         KC_ENT,SYM_MINS,  QK_REP
+                                  NUM_ESC,LT(_MAC_BTN, KC_BSPC),  KC_SPC,         KC_ENT,SYM_MINS,  QK_REP
+    ),
+
+    [_WIN] = LAYOUT_wrapper(
+//   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
+        KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
+        KC_TAB,   WIN_A,   WIN_S,   WIN_D,   WIN_F,    KC_G,           KC_H,   WIN_J,   WIN_K,   WIN_L, WIN_SCN, KC_QUOT,
+      OSL_FUNC,   MED_Z,    KC_X,  HYPR_C,   MEH_V,    KC_B,           KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_LWIN,
+//                              +--------+--------+--------+      +--------+--------+--------+
+                                   NUM_ESC,LT(_WIN_BTN, KC_BSPC), KC_SPC,         KC_ENT,SYM_MINS,  QK_REP
+    ),
+
+    [_MAC_BTN] = LAYOUT_wrapper(
+//   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
+       ___X___, ___X___, ___X___, ___X___, ___X___,   PRNT4,        ___X___, WS_DECR,  WS_INC, ___X___, ___X___, ___X___,
+       ___X___, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
+       ___X___,LGUI(KC_Z),LGUI(KC_X),LGUI(KC_C),LGUI(KC_V),___X___,         TG_NOR,    CMDD,    CMDI, ___X___, ___X___, ___X___,
+//                              +--------+--------+--------+      +--------+--------+--------+
+                                  ___X___, ___X___, _______,          RAYCA,  MO_ADJ, ___X___
+    ),
+
+    [_WIN_BTN] = LAYOUT_wrapper(
+//   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
+       ___X___, ___X___, ___X___, ___X___, ___X___,   PRNT4,        ___X___, WS_DECR,  WS_INC, ___X___, ___X___, ___X___,
+       ___X___, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
+       ___X___,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V),___X___,         TG_NOR,    CMDD,    CMDI, ___X___, ___X___, ___X___,
+//                              +--------+--------+--------+      +--------+--------+--------+
+                                  ___X___, ___X___, _______,          RAYCA,  MO_ADJ, ___X___
     ),
 
     [_NORWEGIAN] = LAYOUT_wrapper(
@@ -54,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
        ___X___, ___X___, ___X___, KC_CIRC, ___X___, ___X___,        _______,    KC_7,    KC_8,    KC_9, _______, KC_BSPC,
        _______, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT,   SFT_G,        KC_ASTR,    KC_4,    KC_5,    KC_6, KC_PLUS, KC_MINS,
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___,    KC_1,    KC_2,    KC_3, KC_SLSH, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___,    KC_1,TD(TD_2_COMM),TD(TD_3_DOT), KC_SLSH, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
                                   ___X___, ___X___, ___X___,         KC_EQL,    KC_0, KC_UNDS
     ),
@@ -68,18 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   ___X___, KC_BSPC, _______,        ___X___, ___X___, ___X___
     ),
 
-    [_BUTTON] = LAYOUT_wrapper(
-//   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       ___X___, ___X___,   SSAVE, ___X___, ___X___,   PRNT4,        ___X___, WS_DECR,  WS_INC, ___X___, ___X___, ___X___,
-       ___X___, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
-       ___X___,    SUND,    SCUT,    SCPY,    SPST, ___X___,         TG_NOR,    CMDD,    CMDI, ___X___, ___X___, ___X___,
-//                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, ___X___, _______,          RAYCA,  MO_ADJ, ___X___
-    ),
-
     [_FUNCTION] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       CG_LNRM, CG_LSWP, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
        ___X___,   KC_F6,   KC_F4,  KC_F10,   KC_F2,  KC_F12,         KC_F11,   KC_F3,   KC_F1,   KC_F5,   KC_F7, ___X___,
        ___X___, ___X___, ___X___, ___X___,   KC_F8, ___X___,        ___X___,   KC_F9, ___X___, ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
@@ -89,15 +107,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_MEDIA] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, KC_VOLD, KC_MUTE, KC_VOLU, ___X___, ___X___,
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, KC_MPRV, KC_MPLY, KC_MNXT, ___X___, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, KC_VOLD, KC_VOLU, KC_MUTE, ___X___, ___X___,
+       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, KC_MPRV, KC_MNXT, KC_MPLY, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
                                   ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___
   ),
 
     [_ADJUST] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___,  OS_STR, ___X___, ___X___,
+       DF_MAC,   DF_WIN, ___X___, ___X___, ___X___, ___X___,        ___X___, ___X___, ___X___,  OS_STR, ___X___, ___X___,
        RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
        RM_NEXT, RM_HUED, RM_SATD, RM_VALD, ___X___, ___X___,        ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+

@@ -6,6 +6,7 @@ REPEAT_KEY_ENABLE = yes
 
 # Userspace features override
 CAPS_WORD_ENABLE = yes
+TAP_DANCE_ENABLE = yes
 COMBO_ENABLE = yes
 NUM_WORD_ENABLE = yes
 OS_DETECTION_ENABLE = no
