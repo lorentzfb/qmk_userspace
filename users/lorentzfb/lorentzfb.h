@@ -30,6 +30,7 @@ enum layers {
     _ADJUST
 };
 
+// Set persistant default layer
 #define DF_MAC PDF(0)
 #define DF_WIN PDF(1)
 
@@ -45,8 +46,8 @@ enum keycodes {
 #define ___X___ KC_NO
 
 // https://docs.qmk.fm/mod_tap
-// _MAC home row mods
 
+// _MAC home row mods
 #define MAC_A LCTL_T(KC_A)
 #define MAC_S LOPT_T(KC_S)
 #define MAC_D CMD_T(KC_D)
@@ -58,7 +59,6 @@ enum keycodes {
 #define MAC_SCN RCTL_T(KC_SCLN)
 
 // _WIN home row mods
-
 #define WIN_A LCTL_T(KC_A)
 #define WIN_S LOPT_T(KC_S)
 #define WIN_D LCTL_T(KC_D)
@@ -82,8 +82,6 @@ enum {
 };
 
 // Layer changes
-// #define BTN_BS LT(_BUTTON, KC_BSPC)
-// #define BTN_ESC LT(_BUTTON, KC_ESC)
 #define NUM_ESC LT(_NUMBER, KC_ESC)
 #define SYM_MINS LT(_SYMBOL, KC_MINS)
 #define MED_Z LT(_MEDIA, KC_Z)
@@ -95,27 +93,12 @@ enum {
 #define WS_INC LALT(LSFT(KC_PLUS))
 #define WS_DECR LALT(LSFT(KC_MINS))
 
-// Mac print screen
-// #define PRNT3 LSFT(LGUI(KC_3))
-#define PRNT4 LSFT(LGUI(KC_4))
-// #define PRNT5 LSFT(LGUI(KC_5))
-
-// Cut, Copy, Paste, Undo
-// Moved to home row
-#define SCUT LGUI(KC_X)
-#define SCPY LGUI(KC_C)
-#define SPST LGUI(KC_V)
-#define SUND LGUI(KC_Z)
+// Print screen
+#define MAC_PRNT LSG(KC_4) // CMD + Shift + 4
+#define WIN_PRNT LSG(KC_S) // Win + Shift + S
 
 // Raycast or spotlight (MEH: Hold Left Control, Shift and Alt)
 #define RAYCA MEH(KC_R)
-
-// Increase/decrease buffer size
-#define CMDI LGUI(KC_PLUS)
-#define CMDD LGUI(KC_MINS)
-
-// Save/write
-#define SSAVE LGUI(KC_S)
 
 // Norwegian (When using EurKEY on mac/win/linux)
 #define NO_AE ALGR(KC_Q)   // æ
