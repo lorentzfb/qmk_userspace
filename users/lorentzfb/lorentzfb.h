@@ -100,6 +100,9 @@ enum {
 // Raycast or spotlight (MEH: Hold Left Control, Shift and Alt)
 #define RAYCA MEH(KC_R)
 
+// Shift-g for Vim goto line
+#define SFT_G LSFT(KC_G)
+
 // Norwegian (When using EurKEY on mac/win/linux)
 #define NO_AE ALGR(KC_Q)   // æ
 #define NO_OSTR ALGR(KC_L) // ø
@@ -114,6 +117,3 @@ enum {
 // #define NO_AE_WIN ALGR(KC_Z) // æ
 // #define NO_O_WIN ALGR(KC_L)  // ø
 // #define NO_AA_WIN ALGR(KC_W) // å
-
-// Shift-g for Vim goto line
-#define SFT_G LSFT(KC_G)
