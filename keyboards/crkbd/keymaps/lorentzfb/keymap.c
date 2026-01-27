@@ -82,9 +82,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
        ___X___, ___X___, ___X___, KC_CIRC, ___X___, ___X___,        _______,    KC_7,    KC_8,    KC_9, KC_PERC, KC_BSPC,
        _______, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT,   SFT_G,        KC_ASTR,    KC_4,    KC_5,    KC_6, KC_PLUS, KC_MINS,
-       ___X___, ___X___, ___X___, ___X___, ___X___, ___X___,        ___X___,    KC_1,TD(TD_2_COMM),TD(TD_3_DOT), KC_SLSH, ___X___,
+       ___X___, ___X___, ___X___, KC_COMM,  KC_DOT, ___X___,        ___X___,    KC_1,    KC_2,    KC_3, KC_SLSH, KC_DOT,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, ___X___, ___X___,         KC_EQL,    KC_0, KC_UNDS
+                                  ___X___, ___X___, ___X___,         KC_EQL,    KC_0, KC_COMM
     ),
 
     [_SYMBOL] = LAYOUT_wrapper(
