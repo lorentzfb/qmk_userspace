@@ -1,22 +1,14 @@
 combos:
-  - { p: [14, 15], k: "{", l: ["Default"] }
-  - { p: [15, 16], k: "(", l: ["Default"] }
-  - { p: [19, 20], k: ")", l: ["Default"] }
-  - { p: [20, 21], k: "}", l: ["Default"] }
-  # - { p: [26, 27], k: "<", l: ["Default"] }
-  - { p: [27, 28], k: "[", l: ["Default"] }
-  - { p: [31, 32], k: "]", l: ["Default"] }
-  # - { p: [32, 33], k: ">", l: ["Default"] }
-  # - { p: [27, 32], k: "CW", a: bottom, l: ["Default"], offset: 2.5 }
-  - { p: [3, 16], k: "CW", l: ["Default"] }
-  - {
-      p: [38, 39],
-      k: "NW",
-      a: top,
-      offset: 0.5,
-      l: ["Default"],
-      type: layer-activator,
-    }
+  - { p: [14, 15], k: "{", l: ["Mac", "Win"] }
+  - { p: [15, 16], k: "(", l: ["Mac", "Win"] }
+  - { p: [19, 20], k: ")", l: ["Mac", "Win"] }
+  - { p: [20, 21], k: "}", l: ["Mac", "Win"] }
+  # - { p: [26, 27], k: "<", l: ["Mac", "Win"] }
+  - { p: [27, 28], k: "[", l: ["Mac", "Win"] }
+  - { p: [31, 32], k: "]", l: ["Mac", "Win"] }
+  # - { p: [32, 33], k: ">", l: ["Mac", "Win"] }
+  # - { p: [27, 32], k: "CW", a: bottom, l: ["Mac", "Win"], offset: 2.5 }
+  - { p: [3, 16], k: "CW", l: ["Mac", "Win"] }
 draw_config:
   key_w: 60
   key_h: 56

@@ -1,26 +1,23 @@
 layout:
   layout_name: LAYOUT_split_3x6_3
 layers:
-  Default: []
+  Mac: []
+  Win: []
+  Mac Util:
+    - key: 37
+      options:
+        type: held
+  Win Util:
+    - key: 37
+      options:
+        type: held
   Norwegian: []
   Number:
-    - key: 38
-      options: { type: held, t: $$mdi:keyboard-space$$, h: CANCEL }
-    - key: 39
+    - key: 36
       options:
         type: held
   Symbol:
-    # - key: 15
-    #   options:
-    #     type: held
-    # - key: 20
-    #   options:
-    #     type: held
     - key: 40
-      options:
-        type: held
-  Navigation:
-    - key: 37
       options:
         type: held
   Function:
@@ -32,6 +29,9 @@ layers:
       options:
         type: held
   Adjust:
+    - key: 37
+      options:
+        type: held
     - key: 40
       options:
         type: held
