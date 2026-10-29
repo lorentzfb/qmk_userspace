@@ -1,5 +1,4 @@
 #include "lorentzfb.h"
-#include "quantum.h"
 #include "features/combos.c"
 
 #ifdef NUM_WORD_ENABLE

@@ -1,4 +1,3 @@
-#include QMK_KEYBOARD_H
 #include "num_word.h"
 
 static uint16_t num_word_timer;

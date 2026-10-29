@@ -2,7 +2,6 @@
 
 #include <stdint.h>
 #include "lorentzfb.h"
-#include "combos.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 // Combos (https://docs.qmk.fm/features/combo)

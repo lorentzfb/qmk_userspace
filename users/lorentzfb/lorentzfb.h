@@ -3,19 +3,8 @@
 // https://docs.qmk.fm/feature_userspace
 // https://github.com/plodah/qmk_userspace/tree/main/users/plodah
 
-#include <stdint.h>
-#include QMK_KEYBOARD_H
-
-
-// #include "os_detection.h"
-// #include "quantum/caps_word.h"
-#include "quantum.h"
-// #include "quantum_keycodes.h"
-// #include "action_layer.h"
-
-// #include "keymap_us.h"
-// #include "quantum/action.h"
-// #include "quantum/quantum_keycodes.h"
+#include QMK_KEYBOARD_H // IWYU pragma: export
+#include "quantum.h"    // IWYU pragma: export
 
 enum layers {
     _MAC = 0,
