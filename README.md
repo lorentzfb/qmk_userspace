@@ -65,9 +65,37 @@ If clangd starts reporting missing headers or undeclared identifiers again, the 
 
 Flash each half separately:
 
+1. Run `qmk flash -kb crkbd/rev1 -km lorentzfb` or `qmk flash` if the default keyboard and keymap are set (see above).
+2. Put the half into bootloader mode (pres and hold Q or P).
+3. Connect the half over USB. The firmware is flashed and the half reboots.
+4. Repeat for the other half.
+
+Alt 2:
+
 1. Plug in one half over USB.
 2. Double-tap the reset button. The controller mounts as a USB drive named `RPI-RP2`.
 3. Copy `crkbd_rev1_lorentzfb.uf2` to the drive. The half reboots once the copy finishes.
 4. Repeat for the other half.
 
 Alternatively, run `qmk flash -kb crkbd/rev1 -km lorentzfb` and put the half into bootloader mode when prompted.
+
+## Update qmk_firmware
+
+`git pull` doesn't update submodules such as ChibiOS, so update them after every pull, then delete the old build objects:
+
+```sh
+cd ~/src/qmk_firmware
+git pull
+git submodule update --init --recursive
+qmk clean
+```
+
+Check that it worked by running `git submodule status`: no line should start with `+`. Then compile as usual, and re-run `--compiledb` if you use clangd (see [Editor support](#editor-support-clangd)).
+
+If the submodules are out of date, the build can fail with errors from inside `lib/`, for example:
+
+```text
+./lib/chibios/os/hal/include/hal.h:136:2: error: #error "obsolete or unknown configuration file"
+```
+
+The steps above fix this.
