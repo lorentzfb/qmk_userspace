@@ -43,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_MAC_BTN] = LAYOUT_wrapper(
 //   +--------+--------+--------+--------+--------+--------+      +--------+--------+--------+--------+--------+--------+
-       ___X___, ___X___, G(KC_S), ___X___, ___X___, ___X___,        ___X___, WS_DECR,  WS_INC, ___X___,MAC_PRNT, ___X___,
+       ___X___, ___X___, G(KC_S), ___X___,LNX_PRNT, ___X___,        ___X___, WS_DECR,  WS_INC, ___X___,MAC_PRNT, ___X___,
        ___X___, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
        ___X___, G(KC_Z), G(KC_X), G(KC_C), G(KC_V), ___X___,         TG_NOR, G(KC_MINS),G(KC_PLUS), ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, ___X___, ___X___,          RAYCA,  MO_ADJ, ___X___
+                                  ___X___, ___X___, ___X___,          LAUNC,  MO_ADJ, ___X___
     ),
 
     [_WIN_BTN] = LAYOUT_wrapper(
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        ___X___, KC_LCTL, KC_LALT, KC_LCTL, KC_LSFT, KC_CAPS,        KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___, ___X___,
        ___X___, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), ___X___,         TG_NOR,C(KC_MINS),C(KC_PLUS), ___X___, ___X___, ___X___,
 //                              +--------+--------+--------+      +--------+--------+--------+
-                                  ___X___, ___X___, ___X___,          RAYCA,  MO_ADJ, ___X___
+                                  ___X___, ___X___, ___X___,          LAUNC,  MO_ADJ, ___X___
     ),
 
     [_NORWEGIAN] = LAYOUT_wrapper(

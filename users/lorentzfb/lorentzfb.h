@@ -49,7 +49,7 @@ enum keycodes {
 
 // _WIN home row mods
 #define WIN_A LCTL_T(KC_A)
-#define WIN_S LOPT_T(KC_S)
+#define WIN_S LALT_T(KC_S)
 #define WIN_D LCTL_T(KC_D)
 #define WIN_F LSFT_T(KC_F)
 
@@ -83,11 +83,13 @@ enum {
 #define WS_DECR LALT(LSFT(KC_MINS))
 
 // Print screen
+#define LNX_PRNT HYPR(KC_P)
 #define MAC_PRNT LSG(KC_4) // CMD + Shift + 4
 #define WIN_PRNT LSG(KC_S) // Win + Shift + S
 
-// Raycast or spotlight (MEH: Hold Left Control, Shift and Alt)
-#define RAYCA MEH(KC_R)
+// App launcher: Omacast, Raycast or Spotlight
+// (MEH: Hold Left Control, Shift and Alt)
+#define LAUNC MEH(KC_L)
 
 // Shift-g for Vim goto line
 #define SFT_G LSFT(KC_G)
